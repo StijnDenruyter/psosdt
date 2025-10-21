@@ -18,7 +18,7 @@ Function Install-PSOSDTWinget {
 		}
 		Catch {
 			Write-Error "Failed to install NuGet Package Provider"
-			Exit
+			#Exit
 		}
 		Try {
 			If (-Not (Get-InstalledModule -Name Microsoft.WinGet.Client -ErrorAction SilentlyContinue)) {
@@ -29,7 +29,7 @@ Function Install-PSOSDTWinget {
 		}
 		Catch {
 			Write-Error "Failed to install Winget PowerShell module"
-			Exit
+			#Exit
 		}
 		Try {
 			Write-Verbose "Repair Winget Package Manager..."
@@ -38,7 +38,7 @@ Function Install-PSOSDTWinget {
 		}
 		Catch {
 			Write-Error "Failed to repair Winget Package Manager"
-			Exit
+			#Exit
 		}
 		Write-Verbose "Successfully installed Microsoft Winget"		
 	}
